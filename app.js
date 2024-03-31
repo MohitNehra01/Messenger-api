@@ -11,9 +11,7 @@ app.use(express.json());
 app.use(cors())
 app.use(morgan('dev'))
 
-app.use("/" , (req,res)=>{
-    return res.json({message: "Hellow From Express App"})
- })
+
 app.use('/api/auth',require('./routes/userRoute'))
 app.use('/api/conversation', require('./routes/conversation'))
 app.use('/api/message' ,require('./routes/messageRoute'))
